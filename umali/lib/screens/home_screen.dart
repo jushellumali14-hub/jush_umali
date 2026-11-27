@@ -52,7 +52,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Search is coming soon')),
+              );
+            },
             icon: Icon(Icons.search, color: fbPrimary),
           ),
         ],

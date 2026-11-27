@@ -161,7 +161,11 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
                   ),
                 ),
                 TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Comment is coming soon')),
+                    );
+                  },
                   icon: Icon(Icons.comment_outlined, color: fbDarkPrimary),
                   label: CustomText(
                     text: 'Comment',
@@ -170,7 +174,11 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
                   ),
                 ),
                 TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Share is coming soon')),
+                    );
+                  },
                   icon: Icon(Icons.redo, color: fbDarkPrimary),
                   label: CustomText(
                     text: 'Share',

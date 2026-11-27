@@ -25,4 +25,14 @@ void main() {
     expect(find.text('Steve Rogers'), findsOneWidget);
     expect(find.text('Tony Stark'), findsOneWidget);
   });
+
+  testWidgets('Newsfeed post can be liked', (WidgetTester tester) async {
+    await tester.pumpWidget(const MainApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.thumb_up_outlined).first);
+    await tester.pump();
+
+    expect(find.byIcon(Icons.thumb_up), findsOneWidget);
+  });
 }

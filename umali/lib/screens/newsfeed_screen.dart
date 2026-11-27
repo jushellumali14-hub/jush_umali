@@ -26,8 +26,8 @@ class NewsfeedScreen extends StatelessWidget {
       'postContent': 'I am Iron Man. #GeniusBillionairePlayboyPhilanthropist',
       'date': 'November 24, 2026',
       'numOfLikes': 3000,
-      'hasImage': true,
-      'imagePath': 'assets/images/iron_man.jpg',
+      'hasImage': false,
+      'imagePath': null,
     },
   ];
 

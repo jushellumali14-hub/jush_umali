@@ -21,7 +21,6 @@ class MainApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'BlushNet',
-          initialRoute: '/home',
           routes: {
             '/home': (context) => const HomeScreen(),
             '/newsfeed': (context) => const NewsfeedScreen(),
