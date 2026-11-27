@@ -115,11 +115,23 @@ class _NewsfeedCardState extends State<NewsfeedCard> {
             if (widget.hasImage == true)
               ClipRRect(
                 borderRadius: BorderRadius.circular(ScreenUtil().setSp(8)),
-                child: widget.imagePath != null
+                child: widget.imagePath != null && widget.imagePath!.isNotEmpty
                     ? Image.asset(
                         widget.imagePath!,
                         width: double.infinity,
+                        height: ScreenUtil().setHeight(180),
                         fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) => Container(
+                          height: ScreenUtil().setHeight(160),
+                          width: double.infinity,
+                          color: fbTextColorWhite,
+                          alignment: Alignment.center,
+                          child: CustomText(
+                            text: 'Image not found: ${widget.imagePath}',
+                            fontSize: ScreenUtil().setSp(12),
+                            color: fbDarkPrimary,
+                          ),
+                        ),
                       )
                     : Container(
                         height: ScreenUtil().setHeight(160),
